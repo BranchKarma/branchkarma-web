@@ -133,4 +133,5 @@ export class MainComponent implements OnInit {
       setTimeout(() => this.type(), this.typingDelay + 1100);
     }
   }
+  //typing text end
 }
