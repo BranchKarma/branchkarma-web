@@ -1,11 +1,19 @@
-import { Component, HostListener, AfterViewInit } from '@angular/core';
+import {
+  Component,
+  HostListener,
+  AfterViewInit,
+  ElementRef,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
+declare var ityped: any;
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
 })
-export class MainComponent implements AfterViewInit {
+export class MainComponent implements OnInit {
   cards = ['Card 1', 'Card 2', 'Card 3', 'Card 4'];
 
   currentIndex = 0;
@@ -74,5 +82,55 @@ export class MainComponent implements AfterViewInit {
 
   closeMenu() {
     this.isOpen = false;
+  }
+  // typing text
+  @ViewChild('typedText', { static: true }) typedText!: ElementRef;
+  @ViewChild('cursor', { static: true }) cursor!: ElementRef;
+
+  textArray = ['hard', 'fun', 'a journey', 'LIFE'];
+  typingDelay = 200;
+  erasingDelay = 100;
+  newTextDelay = 2000;
+  textArrayIndex = 0;
+  charIndex = 0;
+
+  ngOnInit(): void {
+    this.type();
+  }
+
+  type() {
+    if (this.charIndex < this.textArray[this.textArrayIndex].length) {
+      if (!this.cursor.nativeElement.classList.contains('typing')) {
+        this.cursor.nativeElement.classList.add('typing');
+      }
+      this.typedText.nativeElement.textContent += this.textArray[
+        this.textArrayIndex
+      ].charAt(this.charIndex);
+      this.charIndex++;
+      setTimeout(() => this.type(), this.typingDelay);
+    } else {
+      this.cursor.nativeElement.classList.remove('typing');
+      setTimeout(() => this.erase(), this.newTextDelay);
+    }
+  }
+
+  erase() {
+    if (this.charIndex > 0) {
+      if (!this.cursor.nativeElement.classList.contains('typing')) {
+        this.cursor.nativeElement.classList.add('typing');
+      }
+      this.typedText.nativeElement.textContent = this.textArray[
+        this.textArrayIndex
+      ].substring(0, this.charIndex - 1);
+      this.charIndex--;
+      setTimeout(() => this.erase(), this.erasingDelay);
+    } else {
+      this.cursor.nativeElement.classList.remove('typing');
+      this.textArrayIndex++;
+      if (this.textArrayIndex >= this.textArray.length) {
+        this.textArrayIndex = 0;
+      }
+      setTimeout(() => this.type(), this.typingDelay + 1100);
+    }
   }
 }
