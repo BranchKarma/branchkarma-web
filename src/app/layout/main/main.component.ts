@@ -87,7 +87,7 @@ export class MainComponent implements OnInit {
   @ViewChild('typedText', { static: true }) typedText!: ElementRef;
   @ViewChild('cursor', { static: true }) cursor!: ElementRef;
 
-  textArray = ['hard', 'fun', 'a journey', 'LIFE'];
+  textArray = ['Karma', 'Bill', 'Buzz', 'Pilot'];
   typingDelay = 200;
   erasingDelay = 100;
   newTextDelay = 2000;

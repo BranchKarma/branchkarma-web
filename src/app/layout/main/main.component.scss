@@ -357,14 +357,14 @@ body {
   // overflow: hidden;
 }
 .container p span.typed-text {
-  font-weight: normal;
-  color: #dd7732;
+  // font-weight: normal;
+  color: white;
 }
 .container p span.cursor {
   // display: inline-block;
   background-color: #ccc;
-  margin-left: 0.1rem;
-  width: 3px;
+  // margin-left: 0.1rem;
+  // width: 3px;
   animation: blink 1s infinite;
 }
 .container p span.cursor.typing {
