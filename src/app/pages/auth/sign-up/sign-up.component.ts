@@ -13,20 +13,20 @@ export class SignUpComponent implements AfterViewInit {
   cardWidth = 500; // Adjust this based on your card width
 
   nextCard() {
-    debugger;
+    // debugger;
     this.currentIndex = (this.currentIndex + 1) % this.cards.length;
     this.updateSlideOffset();
   }
 
   prevCard() {
-    debugger;
+    // debugger;
     this.currentIndex =
       (this.currentIndex - 1 + this.cards.length) % this.cards.length;
     this.updateSlideOffset();
   }
 
   updateSlideOffset() {
-    debugger;
+    // debugger;
     this.slideOffset = -this.currentIndex * this.cardWidth;
   }
 

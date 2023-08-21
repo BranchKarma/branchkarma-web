@@ -177,8 +177,16 @@
 /* fullscreen-menu.component.scss */
 .blue {
   background-color: #54c8e8;
-  padding: 51%;
+  // width: 25%;
+  padding: 39%;
+  width: 10%;
   z-index: 1;
+  float: right;
+  // height: 102%;
+  // align-items: end;
+}
+.blue-right {
+  align-items: end;
 }
 .C-I-R {
   margin-left: 50%;
@@ -192,7 +200,7 @@
 .map {
   position: absolute;
   z-index: -1;
-  top: 41%;
+  top: 35%;
   width: 100%;
 }
 .branch {
@@ -213,7 +221,7 @@
   // width: 30%;
 }
 .map img {
-  width: 60%;
+  width: 69%;
 }
 .small-device-map {
   position: relative;
@@ -231,15 +239,6 @@
 @media screen and (min-width: 1024px) {
   .main-C-I-R {
     margin-bottom: 19%;
-  }
-}
-
-#spin {
-  color: white;
-  // background-color: #070507;
-  &:after {
-    content: "";
-    animation: spin 4s linears infinite;
   }
 }
 
