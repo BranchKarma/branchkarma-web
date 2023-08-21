@@ -27,14 +27,14 @@ export class MainComponent implements OnInit {
   }
 
   prevCard() {
-    // debugger;
+    debugger;
     this.currentIndex =
       (this.currentIndex - 1 + this.cards.length) % this.cards.length;
     this.updateSlideOffset();
   }
 
   updateSlideOffset() {
-    // debugger;
+    debugger;
     this.slideOffset = -this.currentIndex * this.cardWidth;
   }
 
