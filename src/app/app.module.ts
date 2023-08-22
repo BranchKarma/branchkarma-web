@@ -33,6 +33,7 @@ import { DropdownExampleComponent } from './components/dropdown-example/dropdown
 import { CardCarouselComponent } from './card-carousel/card-carousel.component';
 import { WorkWithUsComponent } from './layout/work-with-us/work-with-us.component';
 import { CoreValueComponent } from './layout/core-value/core-value.component';
+import { OurProductServicesComponent } from './layout/our-product-services/our-product-services.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { CoreValueComponent } from './layout/core-value/core-value.component';
     CardCarouselComponent,
     WorkWithUsComponent,
     CoreValueComponent,
+    OurProductServicesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [
