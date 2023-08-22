@@ -5,6 +5,7 @@ import {
   ElementRef,
   OnInit,
   ViewChild,
+  Renderer2,
 } from '@angular/core';
 declare var ityped: any;
 
@@ -86,8 +87,9 @@ export class MainComponent implements OnInit {
   // typing text
   @ViewChild('typedText', { static: true }) typedText!: ElementRef;
   @ViewChild('cursor', { static: true }) cursor!: ElementRef;
+  // @ViewChild('typedText', { static: true }) typedText: ElementRef;
 
-  textArray = ['Karma', 'Bill', 'Buzz', 'Pilot'];
+  textArray = ['Karma', 'Beyond', 'Build', 'Out'];
   typingDelay = 200;
   erasingDelay = 100;
   newTextDelay = 2000;
@@ -96,6 +98,9 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {
     this.type();
+    setInterval(() => {
+      this.changeTextColor();
+    }, 2000);
   }
 
   type() {
@@ -134,4 +139,17 @@ export class MainComponent implements OnInit {
     }
   }
   //typing text end
+  //typing text updated start
+
+  colors: string[] = ['blue', 'green', 'pink', 'yellow'];
+  currentColorIndex = 0;
+
+  constructor(private renderer: Renderer2) {}
+
+  changeTextColor() {
+    const currentColor = this.colors[this.currentColorIndex];
+    this.renderer.setStyle(this.typedText.nativeElement, 'color', currentColor);
+
+    this.currentColorIndex = (this.currentColorIndex + 1) % this.colors.length;
+  }
 }
