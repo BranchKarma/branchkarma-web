@@ -31,6 +31,8 @@ import { RemoteControlComponent } from './pages/remote-control/remote-control.co
 import { HelpDeskComponent } from './pages/help-desk/help-desk.component';
 import { DropdownExampleComponent } from './components/dropdown-example/dropdown-example.component';
 import { CardCarouselComponent } from './card-carousel/card-carousel.component';
+import { WorkWithUsComponent } from './layout/work-with-us/work-with-us.component';
+import { CoreValueComponent } from './layout/core-value/core-value.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +60,8 @@ import { CardCarouselComponent } from './card-carousel/card-carousel.component';
     HelpDeskComponent,
     DropdownExampleComponent,
     CardCarouselComponent,
+    WorkWithUsComponent,
+    CoreValueComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [
