@@ -321,14 +321,17 @@ body {
 .space-mode {
   font-family: "Space Mono";
 }
-.container p {
+.container p span {
   // font-size: 3rem;
   // padding: 0.5rem;
   font-weight: bold;
-  font-family: "Space Mono";
+  font-family: monospace;
   // letter-spacing: 0.1rem;
   // text-align: center;
   // overflow: hidden;
+}
+.space-mono {
+  // font-family: "";
 }
 .container p span.typed-text {
   // font-weight: normal;
@@ -336,10 +339,10 @@ body {
 }
 .container p span.cursor {
   // display: inline-block;
-  background-color: #ccc;
+  // background-color: #ccc;
   // margin-left: 0.1rem;
   // width: 3px;
-  animation: blink 1s infinite;
+  // animation: blink 1s infinite;
 }
 .container p span.cursor.typing {
   animation: none;
