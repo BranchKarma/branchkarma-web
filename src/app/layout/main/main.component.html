@@ -105,7 +105,7 @@
   <div class="flex flex-col min-h-screen-[92vh]">
     <div class="grid grid-cols-12 bg-black">
       <div class="col-span-4 ml-0 md:ml-8">
-        <div class="ml-24 mt-[200px]">
+        <div class="ml-24 mt-[200px] relative">
           <div class="font-bold text-6xl mb-5">
             <span class="text-white text-center mb-10">We Grow </span
             ><span class="text-orange-400 text-center">Companies.</span>
@@ -134,16 +134,13 @@
             </span>
           </div>
           <!-- <span style="color: #ff8189" class="font-bold text-xl">Branch</span> -->
-          <span class="container">
-            <p class="text-base">
-              <span class="text-orange-400 text-8xl space-mono">Branch </span
-              ><br />
-              <span #typedText class="typed-text text-8xl space-mono"></span
-              ><br />
-              <br />
+          <div class="absolute mt-3">
+            <p class="text-base flex">
+              <span class="text-orange-400 text-8xl space-mono">Branch </span>
+              <span #typedText class="typed-text text-8xl space-mono"></span>
               <span #cursor class="">&nbsp;</span>
             </p>
-          </span>
+          </div>
         </div>
       </div>
       <div class="col-span-8">
@@ -262,10 +259,10 @@
   </div>
   <!-- core value end  -->
   <!-- Careers start -->
-  <div class="p-8 bg-gray-50">
+  <div class="p-8 bg-black">
     <div class="text-3xl font-bold p-10">
       <!-- <div class="text-center ml-auto"><hr class="bg-black w-16" /></div> -->
-      <div class="text-center">
+      <div class="text-center text-white">
         <!-- <div class="text-center w-10"><hr class="bg-slate-950" /></div> -->
         Work and be yourself!
       </div>
