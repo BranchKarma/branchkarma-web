@@ -141,7 +141,7 @@ export class MainComponent implements OnInit {
   //typing text end
   //typing text updated start
 
-  colors: string[] = ['blue', 'green', 'pink', 'yellow'];
+  colors: string[] = ['#F9E800', '#007BFF', '#FF006E', '#27FE01'];
   currentColorIndex = 0;
 
   constructor(private renderer: Renderer2) {}
