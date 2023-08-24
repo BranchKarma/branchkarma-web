@@ -37,6 +37,7 @@ import { OurProductServicesComponent } from './layout/our-product-services/our-p
 import { ImageInlineComponent } from './layout/image-inline/image-inline.component';
 import { CircleCardsComponent } from './layout/circle-cards/circle-cards.component';
 import { BannerComponent } from './layout/banner/banner.component';
+import { VisionComponent } from './layout/vision/vision.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { BannerComponent } from './layout/banner/banner.component';
     ImageInlineComponent,
     CircleCardsComponent,
     BannerComponent,
+    VisionComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [
