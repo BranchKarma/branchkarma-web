@@ -35,6 +35,8 @@ import { WorkWithUsComponent } from './layout/work-with-us/work-with-us.componen
 import { CoreValueComponent } from './layout/core-value/core-value.component';
 import { OurProductServicesComponent } from './layout/our-product-services/our-product-services.component';
 import { ImageInlineComponent } from './layout/image-inline/image-inline.component';
+import { CircleCardsComponent } from './layout/circle-cards/circle-cards.component';
+import { BannerComponent } from './layout/banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +68,8 @@ import { ImageInlineComponent } from './layout/image-inline/image-inline.compone
     CoreValueComponent,
     OurProductServicesComponent,
     ImageInlineComponent,
+    CircleCardsComponent,
+    BannerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [
