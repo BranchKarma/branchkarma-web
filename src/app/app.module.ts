@@ -34,6 +34,7 @@ import { CardCarouselComponent } from './card-carousel/card-carousel.component';
 import { WorkWithUsComponent } from './layout/work-with-us/work-with-us.component';
 import { CoreValueComponent } from './layout/core-value/core-value.component';
 import { OurProductServicesComponent } from './layout/our-product-services/our-product-services.component';
+import { ImageInlineComponent } from './layout/image-inline/image-inline.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { OurProductServicesComponent } from './layout/our-product-services/our-p
     WorkWithUsComponent,
     CoreValueComponent,
     OurProductServicesComponent,
+    ImageInlineComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [
