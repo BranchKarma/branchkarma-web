@@ -39,6 +39,7 @@ import { CircleCardsComponent } from './layout/circle-cards/circle-cards.compone
 import { BannerComponent } from './layout/banner/banner.component';
 import { VisionComponent } from './layout/vision/vision.component';
 import { WorkAndBeYourSelfComponent } from './work-and-be-your-self/work-and-be-your-self.component';
+import { SquareCardsComponent } from './layout/square-cards/square-cards.component';
 
 @NgModule({
   declarations: [
@@ -74,6 +75,7 @@ import { WorkAndBeYourSelfComponent } from './work-and-be-your-self/work-and-be-
     BannerComponent,
     VisionComponent,
     WorkAndBeYourSelfComponent,
+    SquareCardsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [
