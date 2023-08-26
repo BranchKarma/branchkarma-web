@@ -98,9 +98,9 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {
     this.type();
-    setInterval(() => {
-      this.changeTextColor();
-    }, 2000);
+    // setInterval(() => {
+    //   this.changeTextColor();
+    // }, 2000);
   }
 
   type() {
@@ -128,7 +128,12 @@ export class MainComponent implements OnInit {
         this.textArrayIndex
       ].substring(0, this.charIndex - 1);
       this.charIndex--;
-      setTimeout(() => this.erase(), this.erasingDelay);
+      setTimeout(() => {
+        if (this.charIndex == 1) {
+          this.changeTextColor();
+        }
+        this.erase();
+      }, this.erasingDelay);
     } else {
       this.cursor.nativeElement.classList.remove('typing');
       this.textArrayIndex++;
@@ -149,7 +154,11 @@ export class MainComponent implements OnInit {
   changeTextColor() {
     const currentColor = this.colors[this.currentColorIndex];
     this.renderer.setStyle(this.typedText.nativeElement, 'color', currentColor);
-
-    this.currentColorIndex = (this.currentColorIndex + 1) % this.colors.length;
+    if (this.currentColorIndex + 1 == this.colors.length) {
+      this.currentColorIndex = 0;
+    } else {
+      this.currentColorIndex += 1;
+    }
+    // this.currentColorIndex = (this.currentColorIndex + 1) % this.colors.length;
   }
 }
