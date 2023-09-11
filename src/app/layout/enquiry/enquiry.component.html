@@ -1,0 +1,76 @@
+<div class="p-8">
+  <div class="text-3xl font-bold mb-[1em]">
+    <!-- <div class="text-center ml-auto"><hr class="bg-black w-16" /></div> -->
+    <div class="h2 font-bold text-center text-5xl text-white">
+      <!-- <div class="text-center w-10"><hr class="bg-slate-950" /></div> -->
+      Enquiry
+    </div>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-4">
+    <div
+      class="text-center bg-white py-10 rounded-3xl w-2/3"
+      (click)="openForm('general')"
+    >
+      <div class="mb-3"><i class="text-7xl uil uil-users-alt"></i></div>
+      <div class="font-bold text-lg mb-1">General Enquiry Form</div>
+      <div>
+        <button
+          class="bg-black hover:bg-black-500 border-2 border-white-500 text-white font-bold py-2 px-4 mr-3 mb- rounded-full"
+        >
+          Apply
+        </button>
+      </div>
+    </div>
+    <div
+      class="text-center bg-white py-10 rounded-3xl w-2/3"
+      (click)="openForm('careers')"
+    >
+      <div class="mb-3"><i class="text-7xl uil uil-map"></i></div>
+      <div class="font-bold text-lg">Careers</div>
+      <div class="text-lg">
+        If our values yours we will love to work with you.
+      </div>
+    </div>
+    <div class="bg-white py-10 rounded-3xl w-2/3" (click)="openForm('ideas')">
+      <div class="mb-3 text-center">
+        <i class="text-7xl uil uil-list-ul"></i>
+      </div>
+      <div class="font-bold text-lg text-center">Ideas</div>
+      <div class="ml-[25%]">
+        <p>Flexible work schedule and hours.</p>
+        <ul
+          class="space-y-1 text-black-500 list-disc list-inside dark:text-black-400 float-left"
+        >
+          <li>Interactive work culture</li>
+          <li>At least one lowercase character</li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="text-center bg-white py-10 rounded-3xl w-2/3"
+      (click)="openForm('partner')"
+    >
+      <div class="mb-3"><i class="text-7xl uil uil-question-circle"></i></div>
+      <div class="font-bold text-lg">Partner Project</div>
+      <div>20+ Industires 5 Continents</div>
+    </div>
+  </div>
+  <div class="mt-5">
+    <div *ngIf="openFormName === 'general'">
+      <!-- General Enquiry Form component -->
+      <app-general-enquiry-form></app-general-enquiry-form>
+    </div>
+    <div *ngIf="openFormName === 'careers'">
+      <!-- Careers Form component -->
+      <app-careers-form></app-careers-form>
+    </div>
+    <div *ngIf="openFormName === 'ideas'">
+      <!-- Ideas Form component -->
+      <app-ideas-form></app-ideas-form>
+    </div>
+    <div *ngIf="openFormName === 'partner'">
+      <!-- Partner Project Form component -->
+      <app-partner-project-form></app-partner-project-form>
+    </div>
+  </div>
+</div>

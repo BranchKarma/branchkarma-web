@@ -41,6 +41,11 @@ import { VisionComponent } from './layout/vision/vision.component';
 import { WorkAndBeYourSelfComponent } from './work-and-be-your-self/work-and-be-your-self.component';
 import { SquareCardsComponent } from './layout/square-cards/square-cards.component';
 import { InfinityBarComponent } from './layout/infinity-bar/infinity-bar.component';
+import { GeneralEnquiryFormComponent } from './layout/general-enquiry-form/general-enquiry-form.component';
+import { CareersFormComponent } from './layout/careers-form/careers-form.component';
+import { IdeasFormComponent } from './layout/ideas-form/ideas-form.component';
+import { PartnerProjectFormComponent } from './layout/partner-project-form/partner-project-form.component';
+import { EnquiryComponent } from './layout/enquiry/enquiry.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +83,11 @@ import { InfinityBarComponent } from './layout/infinity-bar/infinity-bar.compone
     WorkAndBeYourSelfComponent,
     SquareCardsComponent,
     InfinityBarComponent,
+    GeneralEnquiryFormComponent,
+    CareersFormComponent,
+    IdeasFormComponent,
+    PartnerProjectFormComponent,
+    EnquiryComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [
