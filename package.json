@@ -20,6 +20,8 @@
     "@angular/router": "^14.0.0",
     "@iconscout/unicons": "^4.0.8",
     "ityped": "^1.0.3",
+    "ng-recaptcha": "^12.0.2",
+    "ngx-captcha": "^13.0.0",
     "rxjs": "~7.5.0",
     "swiper": "^10.1.0",
     "tslib": "^2.3.0",
