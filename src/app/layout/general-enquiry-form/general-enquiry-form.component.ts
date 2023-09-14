@@ -16,32 +16,30 @@ export class GeneralEnquiryFormComponent {
   // resolved(captchaResponse: string) {
   //   console.log(`Resolved captcha with response: ${captchaResponse}`);
   // }
-  siteKey: string;
-  constructor() {
-    this.siteKey = '6Ld4ihgoAAAAAJHZmwEXPrtcqG8gKa4rKiEHjDmI';
-  }
-  recaptchaValue: string = '';
+  // siteKey: string;
+  // constructor() {
+  //   this.siteKey = '6Ld4ihgoAAAAAJHZmwEXPrtcqG8gKa4rKiEHjDmI';
+  // }
+  // recaptchaValue: string = '';
 
   // Function to handle form submission
   onSubmit() {
     // Check if the reCAPTCHA response is empty
-    if (!this.recaptchaValue) {
-      alert('Please complete the reCAPTCHA before submitting the form.');
-      return;
-    }
-
+    // if (!this.recaptchaValue) {
+    //   alert('Please complete the reCAPTCHA before submitting the form.');
+    //   return;
+    // }
     // Proceed with form submission here
     // You can send the form data to your server or handle it as needed
     // ...
-
     // Reset the reCAPTCHA value after submission
-    this.recaptchaValue = '';
+    // this.recaptchaValue = '';
   }
 
   // Function to handle reCAPTCHA resolved event
-  onRecaptchaResolved(event: any) {
-    this.recaptchaValue = event;
-  }
+  // onRecaptchaResolved(event: any) {
+  //   this.recaptchaValue = event;
+  // }
   selectedFileName: string | null = null;
 
   displayFileName(event: Event) {

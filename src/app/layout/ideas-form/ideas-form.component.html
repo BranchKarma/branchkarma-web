@@ -342,11 +342,11 @@
   <!-- <ngx-recaptcha2 #captchaElem [siteKey]="siteKey"> </ngx-recaptcha2> -->
 
   <!-- Add reCAPTCHA widget -->
-  <ng-recaptcha
+  <!-- <ng-recaptcha
     [(ngModel)]="recaptchaValue"
     siteKey="6Ld4ihgoAAAAAJHZmwEXPrtcqG8gKa4rKiEHjDmI"
     (resolved)="onRecaptchaResolved($event)"
-  ></ng-recaptcha>
+  ></ng-recaptcha> -->
   <div class="mb-6">
     <label
       for="ReasonForReachingOut"
@@ -362,7 +362,6 @@
   <!-- Submit button -->
   <button
     type="submit"
-    [disabled]="!recaptchaValue"
     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
   >
     Submit
