@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms'; // Import FormsModule
+
 import {
   HttpClientModule,
   HttpClient,
@@ -89,7 +91,7 @@ import { EnquiryComponent } from './layout/enquiry/enquiry.component';
     PartnerProjectFormComponent,
     EnquiryComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
