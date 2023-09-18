@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import countryData from '..//../_files/countries.json';
 
 @Component({
   selector: 'app-ideas-form',
@@ -30,6 +31,8 @@ export class IdeasFormComponent {
   // onRecaptchaResolved(event: any) {
   //   this.recaptchaValue = event;
   // }
+  countryList: { name: string; dial_code: string; code: string }[] =
+    countryData;
   selectedFileName: string | null = null;
 
   displayFileName(event: Event) {

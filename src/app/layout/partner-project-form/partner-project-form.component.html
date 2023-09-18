@@ -4,7 +4,7 @@
       <label
         for="name"
         class="block mb-2 text-base font-medium text-white dark:text-white"
-        >Name
+        >Name*
       </label>
       <input
         type="text"
@@ -18,7 +18,7 @@
       <label
         for="name"
         class="block mb-2 text-base font-medium text-white dark:text-white"
-        >Last Name
+        >Last Name*
       </label>
       <input
         type="text"
@@ -34,21 +34,21 @@
       <label
         for="email"
         class="block mb-2 text-base font-medium text-white dark:text-white"
-        >Your Email ID
+        >Your Email ID*
       </label>
       <input
         type="email"
         id="email"
-        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-72 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         placeholder="name@gmail.com"
         required
       />
     </div>
     <div>
       <label
-        for="email"
+        for="countryCode"
         class="block mb-2 text-base font-medium text-white dark:text-white"
-        >Country Code (DD)
+        >Country Code
       </label>
       <div class="relative inline-block text-left">
         <select
@@ -57,9 +57,13 @@
           class="block appearance-none w-full bg-white border border-gray-300 hover:border-gray-400 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline-blue focus:border-blue-300"
           [(ngModel)]="selectedCountryCode"
         >
-          <option value="" disabled>Select a country code</option>
-          <option *ngFor="let country of countryCodes" [value]="country.code">
-            {{ country.name }} ({{ country.code }})
+          <option value="" disabled>Select a country code*</option>
+          <input placeholder="serach Of country" />
+          <option
+            *ngFor="let country of countryList"
+            [value]="country.dial_code"
+          >
+            {{ country.name }} ({{ country.dial_code }})
           </option>
         </select>
         <div
@@ -131,8 +135,8 @@
         required
       >
         <option value="" disabled>Select your country &nbsp; &nbsp;</option>
-        <option *ngFor="let country of countries" [value]="country">
-          {{ country }}
+        <option *ngFor="let country of countryList" [value]="country.name">
+          {{ country.name }}
         </option>
       </select>
       <div
@@ -160,7 +164,7 @@
     <label
       for="howDidYouHearAboutUs"
       class="block mb-2 text-base font-medium text-white dark:text-white"
-      >How did you hear about us?
+      >How did you hear about us?*
     </label>
     <input
       type="text"
@@ -219,14 +223,18 @@
     >
       Share your socials
     </label>
-    <div *ngFor="let social of socials; let i = index" class="grid grid-cols-3">
+    <div
+      *ngFor="let social of socials; let i = index"
+      class="grid grid-cols-3 gap-3"
+    >
       <div>
-        <label
-          for="linkedin"
-          class="block mb-2 text-sm font-medium text-white dark:text-white"
-        >
-          Medium {{ i + 1 }}
-        </label>
+        <input
+          type="text"
+          id="socialInput_{{ i }}"
+          class="bg-gray-50 border border-gray-300 mb-2 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="social Name"
+          required
+        />
       </div>
       <div>
         <input

@@ -186,19 +186,29 @@
   </div>
   <div class="mb-6">
     <label
-      for="linkedin"
+      for="social"
       class="block mb-2 text-base font-medium text-white dark:text-white"
     >
       Share your socials
     </label>
-    <div *ngFor="let social of socials; let i = index" class="grid grid-cols-3">
+    <div
+      *ngFor="let social of socials; let i = index"
+      class="grid grid-cols-3 gap-3"
+    >
       <div>
-        <label
+        <input
+          type="text"
+          id="socialInput_{{ i }}"
+          class="bg-gray-50 border border-gray-300 mb-2 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="social Name"
+          required
+        />
+        <!-- <label
           for="linkedin"
           class="block mb-2 text-sm font-medium text-white dark:text-white"
         >
           Medium {{ i + 1 }}
-        </label>
+        </label> -->
       </div>
       <div>
         <input

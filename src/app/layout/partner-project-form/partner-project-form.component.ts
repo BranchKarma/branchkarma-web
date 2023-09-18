@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import countryData from '../../_files/countries.json';
 @Component({
   selector: 'app-partner-project-form',
   templateUrl: './partner-project-form.component.html',
@@ -30,6 +30,9 @@ export class PartnerProjectFormComponent {
   // onRecaptchaResolved(event: any) {
   //   this.recaptchaValue = event;
   // }
+  countryList: { name: string; dial_code: string; code: string }[] =
+    countryData;
+
   selectedFileName: string | null = null;
 
   displayFileName(event: Event) {
