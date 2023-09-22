@@ -43,13 +43,58 @@
         </ul>
       </div>
       <div></div>
-      <div class="md:flex md:justify-center md:space-x-8 md:mt-8">
-        <!-- Search input and newsletter form -->
+      <div class="">
+        <label
+          for="input-group-1"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >Your Email</label
+        >
+        <div class="flex mb-6">
+          <div class="relative">
+            <div
+              class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 16"
+              >
+                <path
+                  d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"
+                />
+                <path
+                  d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"
+                />
+              </svg>
+            </div>
+            <input
+              type="email"
+              class="text-white text-center h-10 pl-10 pr-3 rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-1 text-base font-normal leading-[1.6] outline-none focus:z-[3] focus:border-primary focus:text-white focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] dark:border-neutral-600 dark:text-neutral-200 dark:placeholder-text-neutral-200 dark:focus:border-primary"
+              placeholder="Email"
+              aria-label="Email"
+              aria-describedby="button-addon3"
+            />
+          </div>
+          <button
+            class="border-2 h-10 border-primary px-4 py-2 text-xs md:text-sm font-medium uppercase text-primary hover:bg-black hover:bg-opacity-5 focus:outline-none"
+            type="button"
+            id="button-addon3"
+            data-te-ripple-init
+          >
+            Subscribe
+          </button>
+        </div>
+      </div>
+
+      <!-- <div class="flex md:justify-center md:space-x-8 md:mt-8">
+
         <div class="mb-4 md:mb-0">
           <p class="text-lg md:text-xl font-semibold mb-2">Stay Up To Date</p>
-          <div class="relative flex-auto">
+          <div class="flex-auto">
             <i
-              class="uil uil-envelope text-xl md:text-2xl absolute left-3 top-1/2 transform -translate-y-1/2 text-white"
+              class="uil uil-envelope text-xl md:text-2xl left-3 top-1/2 transform -translate-y-1/2 text-white"
             ></i>
             <input
               type="email"
@@ -69,8 +114,7 @@
             </button>
           </div>
         </div>
-        <!-- Add more elements here if needed -->
-      </div>
+      </div> -->
     </div>
     <!-- Add more columns here if needed -->
   </div>
