@@ -13,34 +13,61 @@
     <div [ngClass]="{ hidden: !showMenu, flex: showMenu }" class="lg:flex lg:flex-grow items-center">
       <ul class="flex flex-col lg:flex-row list-none ml-auto">
         <li class="nav-item">
-          <a class="px-3 py-2 flex items-center text-lg font-bold leading-snug text-white hover:opacity-75"
-            href="#pablo">
+          <a class="px-3 py-2 flex items-center text-lg font-bold leading-snug text-white hover:opacity-75 cursor-pointer"
+            [routerLink]="'firms'">
             <i class="fab fa-facebook-square text-lg leading-lg text-white opacity-75"></i><span
-              class="ml-2">Home</span>
+              class="ml-2">Firm</span>
           </a>
         </li>
-
         <li class="nav-item">
-          <a class="px-3 py-2 flex items-center text-lg font-bold leading-snug text-white hover:opacity-75"
-            href="#pablo">
+          <a class="px-3 py-2 flex items-center text-lg font-bold leading-snug text-white hover:opacity-75 cursor-pointer"
+            [routerLink]="'vision'">
+            <i class="fab fa-facebook-square text-lg leading-lg text-white opacity-75"></i><span
+              class="ml-2">Vision</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center text-lg font-bold leading-snug text-white hover:opacity-75 cursor-pointer"
+            [routerLink]="'partners'">
+            <i class="fab fa-facebook-square text-lg leading-lg text-white opacity-75"></i><span
+              class="ml-2">Partners</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center text-lg font-bold leading-snug text-white hover:opacity-75 cursor-pointer"
+            [routerLink]="'entrepreneurs'">
+            <i class="fab fa-facebook-square text-lg leading-lg text-white opacity-75"></i><span
+              class="ml-2">Entrepreneurs</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center text-lg font-bold leading-snug text-white hover:opacity-75 cursor-pointer"
+            [routerLink]="'news'">
+            <i class="fab fa-facebook-square text-lg leading-lg text-white opacity-75"></i><span
+              class="ml-2">News</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center text-lg font-bold leading-snug text-white hover:opacity-75 cursor-pointer"
+            [routerLink]="'about-us'">
             <i class="fab fa-pinterest text-lg leading-lg text-white opacity-75"></i><span class="ml-2">About Us</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="px-3 py-2 flex items-center text-lg font-bold leading-snug text-white hover:opacity-75"
-            href="#pablo">
+          <a class="px-3 py-2 flex items-center text-lg font-bold leading-snug text-white hover:opacity-75 cursor-pointer"
+            [routerLink]="'careers'">
             <i class="fab fa-twitter text-lg leading-lg text-white opacity-75"></i><span class="ml-2">Careers</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="px-3 py-2 flex items-center text-lg font-bold leading-snug text-white hover:opacity-75"
-            href="#pablo">
+          <a class="px-3 py-2 flex items-center text-lg font-bold leading-snug text-white hover:opacity-75 cursor-pointer"
+            [routerLink]="'contact-us'">
             <i class="fab fa-pinterest text-lg leading-lg text-white opacity-75"></i><span class="ml-2">Contact</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="px-3 py-2 flex items-center text-lg font-bold leading-snug text-white hover:opacity-75"
-            href="#pablo">
+          <a class="px-3 py-2 flex items-center text-lg font-bold leading-snug text-white hover:opacity-75 cursor-pointer"
+            [routerLink]="'login'">
             <i class="fab fa-pinterest text-lg leading-lg text-white opacity-75"></i><span class="ml-2">Login</span>
           </a>
         </li>

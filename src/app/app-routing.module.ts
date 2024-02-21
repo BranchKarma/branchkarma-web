@@ -7,6 +7,14 @@ import { MainComponent } from './layout/main/main.component';
 import { AuthComponent } from './layout/auth/auth.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { SignUpComponent } from './pages/auth/sign-up/sign-up.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { FirmsComponent } from './pages/firms/firms.component';
+import { VisionComponent } from './layout/vision/vision.component';
+import { PartnersComponent } from './pages/partners/partners.component';
+import { EntrepreneursComponent } from './pages/entrepreneurs/entrepreneurs.component';
+import { CareersComponent } from './pages/careers/careers.component';
+import { NewsComponent } from './pages/news/news.component';
 
 const routes: Routes = [
   {
@@ -14,7 +22,14 @@ const routes: Routes = [
     component: MainComponent,
     children: [
       { path: '', component: HomeComponent },
-      { path: 'about', component: AboutComponent },
+      { path: 'about-us', component: AboutUsComponent },
+      { path: 'contact-us', component: ContactUsComponent },
+      { path: 'firms', component: FirmsComponent },
+      { path: 'vision', component: VisionComponent },
+      { path: 'partners', component: PartnersComponent },
+      { path: 'entrepreneurs', component: EntrepreneursComponent },
+      { path: 'careers', component: CareersComponent },
+      { path: 'news', component: NewsComponent },
     ],
   },
   {

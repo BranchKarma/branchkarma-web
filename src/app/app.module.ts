@@ -48,6 +48,13 @@ import { CareersFormComponent } from './layout/careers-form/careers-form.compone
 import { IdeasFormComponent } from './layout/ideas-form/ideas-form.component';
 import { PartnerProjectFormComponent } from './layout/partner-project-form/partner-project-form.component';
 import { EnquiryComponent } from './layout/enquiry/enquiry.component';
+import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { FirmsComponent } from './pages/firms/firms.component';
+import { PartnersComponent } from './pages/partners/partners.component';
+import { EntrepreneursComponent } from './pages/entrepreneurs/entrepreneurs.component';
+import { CareersComponent } from './pages/careers/careers.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { NewsComponent } from './pages/news/news.component';
 
 @NgModule({
   declarations: [
@@ -90,6 +97,13 @@ import { EnquiryComponent } from './layout/enquiry/enquiry.component';
     IdeasFormComponent,
     PartnerProjectFormComponent,
     EnquiryComponent,
+    ContactUsComponent,
+    FirmsComponent,
+    PartnersComponent,
+    EntrepreneursComponent,
+    CareersComponent,
+    AboutUsComponent,
+    NewsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [
