@@ -10,11 +10,13 @@ import { SignUpComponent } from './pages/auth/sign-up/sign-up.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { FirmsComponent } from './pages/firms/firms.component';
-import { VisionComponent } from './layout/vision/vision.component';
 import { PartnersComponent } from './pages/partners/partners.component';
 import { EntrepreneursComponent } from './pages/entrepreneurs/entrepreneurs.component';
 import { CareersComponent } from './pages/careers/careers.component';
 import { NewsComponent } from './pages/news/news.component';
+import { TeamsComponent } from './pages/teams/teams.component';
+import { PortalComponent } from './pages/portal/portal.component';
+import { VisionComponent } from './pages/vision/vision.component';
 
 const routes: Routes = [
   {
@@ -30,6 +32,8 @@ const routes: Routes = [
       { path: 'entrepreneurs', component: EntrepreneursComponent },
       { path: 'careers', component: CareersComponent },
       { path: 'news', component: NewsComponent },
+      { path: 'teams', component: TeamsComponent },
+      { path: 'portal', component: PortalComponent },
     ],
   },
   {

@@ -55,6 +55,8 @@ import { EntrepreneursComponent } from './pages/entrepreneurs/entrepreneurs.comp
 import { CareersComponent } from './pages/careers/careers.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { NewsComponent } from './pages/news/news.component';
+import { TeamsComponent } from './pages/teams/teams.component';
+import { PortalComponent } from './pages/portal/portal.component';
 
 @NgModule({
   declarations: [
@@ -104,6 +106,8 @@ import { NewsComponent } from './pages/news/news.component';
     CareersComponent,
     AboutUsComponent,
     NewsComponent,
+    TeamsComponent,
+    PortalComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [
