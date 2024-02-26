@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-declare var particlesJS: any;
 @Component({
   selector: 'app-teams',
   templateUrl: './teams.component.html',
@@ -7,7 +6,5 @@ declare var particlesJS: any;
 })
 export class TeamsComponent implements OnInit {
   constructor() {}
-  ngOnInit(): void {
-    particlesJS.load('particles-js', 'assets/particles.json', null);
-  }
+  ngOnInit(): void {}
 }
