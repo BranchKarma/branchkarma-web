@@ -57,6 +57,7 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { NewsComponent } from './pages/news/news.component';
 import { TeamsComponent } from './pages/teams/teams.component';
 import { PortalComponent } from './pages/portal/portal.component';
+import { ChartComponent } from './components/chart/chart.component';
 
 @NgModule({
   declarations: [
@@ -108,6 +109,7 @@ import { PortalComponent } from './pages/portal/portal.component';
     NewsComponent,
     TeamsComponent,
     PortalComponent,
+    ChartComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [
