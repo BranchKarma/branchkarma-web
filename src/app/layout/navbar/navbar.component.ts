@@ -7,7 +7,9 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
   showMenu = false;
+  showLogin: boolean = false;
   toggleNavbar() {
     this.showMenu = !this.showMenu;
   }
+  login() {}
 }

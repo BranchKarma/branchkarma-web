@@ -60,6 +60,16 @@
               class="ml-2">News</span>
           </a>
         </li>
+        <li class="nav-item">
+          <a class="px-2 py-2 flex items-center text-md font-semibold leading-snug text-white cursor-pointer hover:font-bold"
+            (click)="showLogin = !showLogin">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+            </svg>
+          </a>
+        </li>
         <!-- <li class="nav-item">
           <a class="px-2 py-2 flex items-center text-md font-semibold leading-snug text-white cursor-pointer hover:font-bold"
             [routerLink]="'about-us'">
@@ -82,3 +92,34 @@
     </div>
   </div>
 </nav>
+<div class="fixed inset-0 flex items-center justify-center bg-gray-500 bg-opacity-50 z-10" *ngIf="showLogin">
+  <div class="bg-white p-20 rounded-lg shadow-lg z-10">
+    <button
+      class="relative top-0 right-0 mr-[-70px] mt-[-70px] text-rose-700 hover:text-gray-700 cursor-pointer z-10 float-right"
+      (click)="showLogin = false">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-10 h-10">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+      </svg>
+    </button>
+    <img src="assets/image/bklogof.png" alt="Logo" class="mx-auto mb-6" style="max-width: 100px;">
+    <form class="text-center">
+      <label for="username" class="block text-left">Username or Email:</label>
+      <input type="text" id="username" name="username" required placeholder="Please enter your username/email"
+        class="block mx-auto mt-2 border border-gray-300 rounded-md p-2 w-[400px]"><br>
+
+      <label for="password" class="block text-left">Password:</label>
+      <input type="password" id="password" name="password" required placeholder="Please enter your password"
+        class="block mx-auto my-2 border border-gray-300 rounded-md p-2 w-[400px]"><br>
+
+      <button type="button"
+        class="block mx-auto bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Sign In</button><br>
+
+      <p class="">
+        <span class="inline float-left"><a href="#" class=" text-blue-500">Forgot Password?</a></span>
+        <span class="inline float-right">Not yet registered? <a href="#" class="text-blue-500">Sign Up</a></span>
+      </p>
+    </form>
+  </div>
+</div>
