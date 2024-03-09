@@ -17,6 +17,8 @@ import { NewsComponent } from './pages/news/news.component';
 import { TeamsComponent } from './pages/teams/teams.component';
 import { PortalComponent } from './pages/portal/portal.component';
 import { VisionComponent } from './pages/vision/vision.component';
+import { PortfolioComponent } from './pages/portfolio/portfolio.component';
+import { InvestorsComponent } from './pages/investors/investors.component';
 
 const routes: Routes = [
   {
@@ -34,6 +36,8 @@ const routes: Routes = [
       { path: 'news', component: NewsComponent },
       { path: 'teams', component: TeamsComponent },
       { path: 'portal', component: PortalComponent },
+      { path: 'portfolio', component: PortfolioComponent },
+      { path: 'investors', component: InvestorsComponent },
     ],
   },
   {
