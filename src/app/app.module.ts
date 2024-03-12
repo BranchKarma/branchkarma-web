@@ -60,6 +60,7 @@ import { PortalComponent } from './pages/portal/portal.component';
 import { ChartComponent } from './components/chart/chart.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { InvestorsComponent } from './pages/investors/investors.component';
+import { FooterNewComponent } from './components/footer-new/footer-new.component';
 
 @NgModule({
   declarations: [
@@ -114,6 +115,7 @@ import { InvestorsComponent } from './pages/investors/investors.component';
     ChartComponent,
     PortfolioComponent,
     InvestorsComponent,
+    FooterNewComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [
