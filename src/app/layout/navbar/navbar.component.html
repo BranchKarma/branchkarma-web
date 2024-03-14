@@ -118,7 +118,7 @@
       </svg>
     </button>
     <img src="assets/image/bklogof.png" alt="Logo" class="mx-auto mb-6" style="max-width: 100px;">
-    <form class="text-center">
+    <form class="text-center" *ngIf="signIn">
       <!-- <label for="username" class="block text-left">Username or Email:</label> -->
       <input type="text" id="username" name="username" required placeholder="Username or Email"
         class="block mx-auto mt-2 border border-gray-300 rounded-md p-2 w-[400px]">
@@ -133,7 +133,30 @@
       <button type="button"
         class="block mx-auto bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Sign In</button><br>
       <p class="">
-        <span class="inline float-left">Not yet registered? <a href="#" class="text-blue-500">Sign Up</a></span>
+        <span class="inline float-left">Not yet registered? <a href="#" class="text-blue-500"
+            (click)="signIn = false">Sign Up</a></span>
+      </p><br><br>
+    </form>
+    <form class="text-center" *ngIf="!signIn">
+      <!-- <label for="username" class="block text-left">Username or Email:</label> -->
+      <input type="text" id="name" name="name" required placeholder="Full Name"
+        class="block mx-auto mt-2 border border-gray-300 rounded-md p-2 w-[400px]">
+
+      <input type="text" id="username" name="username" required placeholder="Email"
+        class="block mx-auto mt-2 border border-gray-300 rounded-md p-2 w-[400px]">
+
+      <!-- <label for="password" class="block text-left">Password:</label> -->
+      <input type="password" id="password" name="password" required placeholder="Password"
+        class="block mx-auto my-2 border border-gray-300 rounded-md p-2 w-[400px]">
+
+      <p class="">
+        <span class="inline float-left"><a href="#" class=" text-blue-500">Forgot Password?</a></span>
+      </p><br>
+      <button type="button"
+        class="block mx-auto bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Sign Up</button><br>
+      <p class="">
+        <span class="inline float-left">Not yet registered? <a href="#" class="text-blue-500"
+            (click)="signIn = true">Sign In</a></span>
       </p><br><br>
     </form>
   </div>

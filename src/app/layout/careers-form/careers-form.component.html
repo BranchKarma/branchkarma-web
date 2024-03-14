@@ -1,108 +1,55 @@
 <form #myForm="ngForm" (ngSubmit)="onSubmit()">
   <div class="mb-6 grid grid-cols-2 gap-3">
     <div>
-      <label
-        for="name"
-        class="block mb-2 text-base font-medium text-white dark:text-white"
-        >Name*
+      <label for="name" class="block mb-2 text-base font-medium text-white dark:text-white">Name*
       </label>
-      <input
-        type="text"
-        id="name"
+      <input type="text" id="name"
         class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        placeholder=""
-        required
-      />
+        placeholder="" required />
     </div>
     <div>
-      <label
-        for="name"
-        class="block mb-2 text-base font-medium text-white dark:text-white"
-        >Last Name*
+      <label for="name" class="block mb-2 text-base font-medium text-white dark:text-white">Last Name*
       </label>
-      <input
-        type="text"
-        id="name"
+      <input type="text" id="name"
         class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        placeholder=""
-        required
-      />
+        placeholder="" required />
     </div>
   </div>
   <div class="mb-6 flex gap-3">
     <div>
-      <label
-        for="email"
-        class="block mb-2 text-base font-medium text-white dark:text-white"
-        >Your Email ID*
+      <label for="email" class="block mb-2 text-base font-medium text-white dark:text-white">Your Email ID*
       </label>
-      <input
-        type="email"
-        id="email"
+      <input type="email" id="email"
         class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-72 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        placeholder="name@gmail.com"
-        required
-      />
+        placeholder="name@gmail.com" required />
     </div>
     <div>
-      <label
-        for="email"
-        class="block mb-2 text-base font-medium text-white dark:text-white"
-        >Country Code
+      <label for="email" class="block mb-2 text-base font-medium text-white dark:text-white">Country Code
       </label>
       <div class="relative inline-block text-left">
-        <select
-          id="countryCodes"
-          name="countryCodes"
+        <select id="countryCodes" name="countryCodes"
           class="block appearance-none w-full bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          [(ngModel)]="selectedCountryCode"
-        >
+          [(ngModel)]="selectedCountryCode">
           <option value="" disabled>Select a country code</option>
           <input placeholder="serach Of country" />
-          <option
-            *ngFor="let country of countryList"
-            [value]="country.dial_code"
-          >
+          <option *ngFor="let country of countryList" [value]="country.dial_code">
             {{ country.name }} ({{ country.dial_code }})
           </option>
         </select>
-        <div
-          class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
-        >
-          <svg
-            class="w-4 h-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M5 10l7-7m0 0l7 7m-7-7v18"
-            ></path>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
           </svg>
         </div>
       </div>
     </div>
     <div>
-      <label
-        for="contactNumber"
-        class="block mb-2 text-base font-medium text-white dark:text-white"
-      >
+      <label for="contactNumber" class="block mb-2 text-base font-medium text-white dark:text-white">
         Contact Number
       </label>
-      <input
-        type="tel"
-        id="contactNumber"
-        name="contactNumber"
+      <input type="tel" id="contactNumber" name="contactNumber"
         class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        required
-        minlength="10"
-        maxlength="10"
-        pattern="[0-9]{10}"
-      />
+        required minlength="10" maxlength="10" pattern="[0-9]{10}" />
     </div>
   </div>
   <!-- <div class="mb-6">
@@ -120,109 +67,60 @@
     />
   </div> -->
   <div class="mb-6">
-    <label
-      for="countryDropdown"
-      class="block mb-2 text-base font-medium text-white dark:text-white"
-    >
+    <label for="countryDropdown" class="block mb-2 text-base font-medium text-white dark:text-white">
       Which country are you from?*
     </label>
     <div class="relative inline-block text-left mr-2">
-      <select
-        id="countryDropdown"
-        name="countryDropdown"
+      <select id="countryDropdown" name="countryDropdown"
         class="block appearance-none w-full bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        [(ngModel)]="selectedCountry"
-        required
-      >
+        [(ngModel)]="selectedCountry" required>
         <option value="" disabled>Select your country &nbsp; &nbsp;</option>
         <option *ngFor="let country of countryList" [value]="country.name">
           {{ country.name }}
         </option>
       </select>
-      <div
-        class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
-      >
-        <svg
-          class="w-4 h-4 ml-3"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M5 10l7-7m0 0l7 7m-7-7v18"
-          ></path>
+      <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+        <svg class="w-4 h-4 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
         </svg>
       </div>
     </div>
   </div>
 
   <div class="mb-6">
-    <label
-      for="howDidYouHearAboutUs"
-      class="block mb-2 text-base font-medium text-white dark:text-white"
-      >How did you hear about us?*
+    <label for="howDidYouHearAboutUs" class="block mb-2 text-base font-medium text-white dark:text-white">How did you
+      hear about us?*
     </label>
-    <input
-      type="text"
-      id="howDidYouHearAboutUs"
+    <input type="text" id="howDidYouHearAboutUs"
       class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-      placeholder=""
-      required
-    />
+      placeholder="" required />
   </div>
   <div class="mb-6">
-    <label
-      for="whatRoleAreYouInterestedIn"
-      class="block mb-2 text-base font-medium text-white dark:text-white"
-      >What role are you interested in?
+    <label for="whatRoleAreYouInterestedIn" class="block mb-2 text-base font-medium text-white dark:text-white">What
+      role are you interested in?
     </label>
-    <input
-      type="text"
-      id="whatRoleAreYouInterestedIn"
-      name="whatRoleAreYouInterestedIn"
+    <input type="text" id="whatRoleAreYouInterestedIn" name="whatRoleAreYouInterestedIn"
       class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-      placeholder=""
-      required
-    />
+      placeholder="" required />
   </div>
   <div class="mb-6">
-    <label
-      for="linkedin"
-      class="block mb-2 text-base font-medium text-white dark:text-white"
-    >
+    <label for="linkedin" class="block mb-2 text-base font-medium text-white dark:text-white">
       Share your socials
     </label>
-    <div
-      *ngFor="let social of socials; let i = index"
-      class="grid grid-cols-3 gap-3"
-    >
+    <div *ngFor="let social of socials; let i = index" class="grid grid-cols-3 gap-3">
       <div>
-        <input
-          type="text"
-          id="socialInput_{{ i }}"
+        <input type="text" id="socialInput_{{ i }}"
           class="bg-gray-50 border border-gray-300 mb-2 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          placeholder="Medium "
-          required
-        />
+          placeholder="Medium " required />
       </div>
       <div>
-        <input
-          type="text"
-          id="socialInput_{{ i }}"
+        <input type="text" id="socialInput_{{ i }}"
           class="bg-gray-50 border border-gray-300 mb-2 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          placeholder="Link"
-          required
-        />
+          placeholder="Link" required />
       </div>
       <div class="mx-auto" *ngIf="i === socials.length - 1">
-        <button
-          (click)="addSocialField()"
-          class="text-white text-2xl font-medium focus:outline-none"
-        >
+        <button (click)="addSocialField()" class="text-white text-2xl font-medium focus:outline-none">
           +
         </button>
       </div>
@@ -230,17 +128,12 @@
   </div>
 
   <div class="mb-6">
-    <label
-      for="ReasonForReachingOut"
-      class="block mb-2 text-base font-medium text-white dark:text-white"
-      >What interests you about working for BranchKarma?
+    <label for="ReasonForReachingOut" class="block mb-2 text-base font-medium text-white dark:text-white">What interests
+      you about working for Branch Karma?
     </label>
-    <textarea
-      id="whatInterestsYouAboutWorkingForBranchKarma"
-      rows="4"
+    <textarea id="whatInterestsYouAboutWorkingForBranch Karma" rows="4"
       class="block p-2.5 w-full text-base text-black bg-text-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-      placeholder=""
-    ></textarea>
+      placeholder=""></textarea>
     <!-- <input
       type="text"
       id="ReasonForReachingOut"
@@ -318,54 +211,34 @@
     (resolved)="onRecaptchaResolved($event)"
   ></ng-recaptcha> -->
   <div class="mb-6">
-    <label
-      for="coverLetter"
-      class="block mb-2 text-base font-medium text-white dark:text-white"
-      >Cover Letter
+    <label for="coverLetter" class="block mb-2 text-base font-medium text-white dark:text-white">Cover Letter
     </label>
     <textarea
       class="block w-full p-2.5 text-base text-gray-900 bg-gray-50 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-      rows="4"
-      placeholder=""
-    ></textarea>
+      rows="4" placeholder=""></textarea>
   </div>
 
   <div class="mb-6">
     <div class="mt-4">
-      <label
-        for="fileInput"
-        class="block text-base font-medium text-white mb-3"
-      >
+      <label for="fileInput" class="block text-base font-medium text-white mb-3">
         Upload Files (PDF, JPG, PNG)
       </label>
       <div class="mt-1 flex items-center space-x-4">
         <label
-          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-base font-semibold text-gray-700 cursor-pointer"
-        >
+          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-base font-semibold text-gray-700 cursor-pointer">
           <span>{{ selectedFileName || "Choose a file" }}</span>
-          <input
-            type="file"
-            id="fileInput"
-            name="fileInput"
-            class="hidden"
-            accept=".pdf, .jpg, .jpeg, .png"
-            (change)="displayFileName($event)"
-          />
+          <input type="file" id="fileInput" name="fileInput" class="hidden" accept=".pdf, .jpg, .jpeg, .png"
+            (change)="displayFileName($event)" />
         </label>
-        <label
-          for="fileInput"
-          class="cursor-pointer font-medium text-white hover:text-text-white"
-        >
+        <label for="fileInput" class="cursor-pointer font-medium text-white hover:text-text-white">
           Browse
         </label>
       </div>
     </div>
   </div>
   <!-- Submit button -->
-  <button
-    type="submit"
-    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-  >
+  <button type="submit"
+    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
     Submit
   </button>
 </form>
